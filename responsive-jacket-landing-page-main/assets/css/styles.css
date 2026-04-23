@@ -80,7 +80,7 @@ img {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: var(--black-color);
+  background-color: transparent;
   z-index: 100;
 
 }
@@ -178,17 +178,129 @@ img {
 } 
 
 /*=============== HOME ===============*/
+.home__slider{
+  position: relative;
+  height: 100vh;
+  padding-block: 9.5rem 3rem;
+  display: grid;
+  align-content: center;
+  row-gap: 4rem;
+}
 
+.home__logos{
+  position: absolute;
+  top: calc(50% - 12rem);
+  justify-self: center;
+  opacity: .4;
+}
 
+.home__logo-3{
+  width: 320px;
+}
+
+.home__logo-2{
+  width: 270px;
+  position: absolute;
+  right: 0;
+  bottom: 4rem;
+  rotate: 5deg;
+}
+
+.home__logo-1{
+  width: 220px;
+  position: absolute;
+  right: 0;
+  top: -5rem;
+  rotate: 5deg;
+}
+
+.home__image{
+  z-index: 10;
+  justify-content: center;
+}
+
+.home__image{
+  width: 320px;
+}
+
+.home-green{
+  background: var(--green-color-gradient);
+}
+
+.home-orange{
+  background: var(--orange-color-gradient);
+}
+
+.home-sky-blue{
+  background: var(--sky-blue-color-gradient);
+}
+
+.home-purple{
+  background: var(--purple-color-gradient);
+}
+
+.home__data{
+  text-align: center;
+  color: var(--white-color);
+}
+
+.home__name{
+  font-size: var(--bigger-font-size);
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+
+.home__price{
+  font: 600 var(--bigger-font-size) var(--body-font);
+  margin-block: 1rem 2rem;
+}
+
+.home__button{
+  background-color: var(--white-color);
+  color: var(--black-color);
+  padding: .75rem 1rem;
+  border-radius: 4rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  column-gap: .5rem;
+  cursor: pointer;
+  transition: box-shadow .4s;
+}
+
+.home__button i{
+  font-weight: initial;
+  font-size: 1.5rem;
+}
+
+.home__button:hover{
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, .1);
+}
 /* Swiper class */
+.home .swiper-pagination{
+  top: initial;
+  bottom: calc(50% - 5rem);
+}
 
+.home .swiper-pagination-bullet{
+  background-color: var(--white-color);
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices <> */
-
+@media (width <= 320px){
+  .home__logos{
+    zoom: .85;
+  }
+}
 
 /* For medium devices <> */
-
+@media (width >= 540px){
+  .home__slider{
+   grid-template-columns: 500px;
+   justify-content: center;
+  }
+}
 
 /* For large devices <> */
  @media (width >= 1150px){
