@@ -44,7 +44,13 @@ const swiperHome = new Swiper('.home__swiper',{
 })
 
 /*=============== CHANGE HEADER STYLES ===============*/
+const scrollHeader = () => {
+    const header = document.getElementById('header')
+    // Add the .scroll-header if the bottom scroll of the viewport
+    this.scrollY >= 50 ? header.classList.add('scroll-header')
+                        : header.classList.remove('scroll')
+}
 
-
+window.addEventListener('scroll', scrollHeader)
 /*=============== GSAP ANIMATION ===============*/
 
