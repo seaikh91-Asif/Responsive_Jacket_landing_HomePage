@@ -1,7 +1,7 @@
 /*=============== SHOW MENU ===============*/
-const navMenu = document.getElementById('nav-menu')
-      navToggle = document.getElementById('nav-toggle')
-      navClose = document.getElementById('nav-close')
+const navMenu = document.getElementById('nav-menu');
+const navToggle = document.getElementById('nav-toggle');
+const navClose = document.getElementById('nav-close');
 
 // show menu
 if(navToggle){
@@ -27,20 +27,22 @@ const linkAction = () => {
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*=============== SWIPER HOME ===============*/
-const swiperHome = new Swiper('.home__swiper',{
-    loop: true,
-    speed: 800, 
-    effect: 'fade', 
-    parallax: true,
+/*=========== SWIPER HOME ===========*/
+const swiperHome = new Swiper('.home__swiper', {
+  loop: true,
+  speed: 800,
+  effect: 'fade',
+  parallax: true,
 
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    autoplay: {
-        delay:3000,
-        disableOnInteraction:false,
-    }
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  }
 })
 
 /*=============== CHANGE HEADER STYLES ===============*/
